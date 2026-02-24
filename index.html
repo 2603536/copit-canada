@@ -4,10 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Copit Canada</title>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
 <!-- FREE SHIPPING -->
@@ -19,9 +18,16 @@
 <header id="mainHeader">
 
   <div class="nav-left">
-    <a href="#">Home</a>
-    <a href="#categories">Catalog</a>
-    <a href="#contact">Contact</a>
+    <div class="catalog-dropdown">
+      <a href="#">CATALOG</a>
+      <div class="mega-menu">
+        <a href="#">CLOTHES</a>
+        <a href="#">FRAGRANCES</a>
+        <a href="#">ELECTRONICS</a>
+      </div>
+    </div>
+    <a href="#">HOME</a>
+    <a href="#contact">CONTACT</a>
   </div>
 
   <div class="logo">
@@ -29,46 +35,45 @@
   </div>
 
   <div class="nav-right">
-    <a href="#">Profile</a>
-    <a href="#" onclick="openCart()">Cart (0)</a>
+    <a href="#" onclick="openAuth()">PROFILE</a>
+    <a href="#" onclick="openCart()">CART (<span id="cart-count">0</span>)</a>
   </div>
 
 </header>
 
-<!-- MOVING RED BAR -->
 <div class="moving-banner" id="movingBanner">
   <div class="banner-track">
-    Limited Stock • Only The Best Quality • Limited Stock • Only The Best Quality •
+    LIMITED STOCK • ONLY THE BEST QUALITY • LIMITED STOCK • ONLY THE BEST QUALITY •
   </div>
 </div>
 
-<!-- CATEGORIES -->
+<!-- SHOP CATEGORIES -->
 <section id="categories" class="categories">
-  <h2 class="gradient-title">Shop by Category</h2>
+  <h2 class="gradient-title">SHOP BY CATEGORY</h2>
 
   <div class="category-grid">
 
     <div class="category-box">
       <img src="images/clothes.jpg">
       <div class="category-content">
-        <h3>Clothes</h3>
-        <a href="#" class="btn">Shop Now</a>
+        <h3>CLOTHES</h3>
+        <a href="#" class="btn">SHOP NOW</a>
       </div>
     </div>
 
     <div class="category-box">
       <img src="images/fragrances.jpg">
       <div class="category-content">
-        <h3>Fragrances</h3>
-        <a href="#" class="btn">Shop Now</a>
+        <h3>FRAGRANCES</h3>
+        <a href="#" class="btn">SHOP NOW</a>
       </div>
     </div>
 
     <div class="category-box">
       <img src="images/electronics.jpg">
       <div class="category-content">
-        <h3>Electronics</h3>
-        <a href="#" class="btn">Shop Now</a>
+        <h3>ELECTRONICS</h3>
+        <a href="#" class="btn">SHOP NOW</a>
       </div>
     </div>
 
@@ -77,38 +82,49 @@
 
 <!-- BEST SELLERS -->
 <section class="best-sellers">
-  <h2>Best Sellers</h2>
+  <h2>BEST SELLERS</h2>
 
   <div class="seller-grid">
-    <div class="seller-box"><img src="images/product1.jpg"><p>Product Name 1</p></div>
-    <div class="seller-box"><img src="images/product2.jpg"><p>Product Name 2</p></div>
-    <div class="seller-box"><img src="images/product3.jpg"><p>Product Name 3</p></div>
-    <div class="seller-box"><img src="images/product4.jpg"><p>Product Name 4</p></div>
-    <div class="seller-box"><img src="images/product5.jpg"><p>Product Name 5</p></div>
+    <div class="seller-box"><img src="images/product1.jpg"><p>PRODUCT NAME</p><button onclick="addToCart('Product 1')">ADD TO CART</button></div>
+    <div class="seller-box"><img src="images/product2.jpg"><p>PRODUCT NAME</p><button onclick="addToCart('Product 2')">ADD TO CART</button></div>
+    <div class="seller-box"><img src="images/product3.jpg"><p>PRODUCT NAME</p><button onclick="addToCart('Product 3')">ADD TO CART</button></div>
+    <div class="seller-box"><img src="images/product4.jpg"><p>PRODUCT NAME</p><button onclick="addToCart('Product 4')">ADD TO CART</button></div>
+    <div class="seller-box"><img src="images/product5.jpg"><p>PRODUCT NAME</p><button onclick="addToCart('Product 5')">ADD TO CART</button></div>
   </div>
 </section>
 
-<!-- REVIEWS SCROLL RIGHT TO LEFT -->
+<!-- INFINITE REVIEWS -->
 <section class="reviews-scroll">
-  <div class="review-track right-to-left">
-    <div class="review">Amazing quality 🔥</div>
-    <div class="review">Shipping was fast</div>
-    <div class="review">Will buy again</div>
-    <div class="review">5 stars</div>
-    <div class="review">Best online store</div>
+  <div class="review-wrapper">
+    <div class="review-track" id="reviewTrack">
+      <div class="review">AMAZING QUALITY</div>
+      <div class="review">FAST SHIPPING</div>
+      <div class="review">BEST STORE</div>
+      <div class="review">5 STAR SERVICE</div>
+      <div class="review">INSANE QUALITY</div>
+    </div>
   </div>
 </section>
 
-<!-- REVIEWS SCROLL LEFT TO RIGHT -->
-<section class="reviews-scroll">
-  <div class="review-track left-to-right">
-    <div class="review">Premium feel</div>
-    <div class="review">Highly recommend</div>
-    <div class="review">Worth every dollar</div>
-    <div class="review">Great customer support</div>
-    <div class="review">Insane quality</div>
+<!-- CART DRAWER -->
+<div class="cart-drawer" id="cartDrawer">
+  <div class="cart-header">
+    <h3>YOUR CART</h3>
+    <button onclick="closeCart()">✕</button>
   </div>
-</section>
+  <div id="cart-items"></div>
+</div>
+
+<!-- LOGIN MODAL -->
+<div class="auth-modal" id="authModal">
+  <div class="auth-box">
+    <span onclick="closeAuth()">✕</span>
+    <h2>LOGIN / SIGN UP</h2>
+    <input type="text" placeholder="EMAIL">
+    <input type="password" placeholder="PASSWORD">
+    <button>SUBMIT</button>
+  </div>
+</div>
 
 <script src="script.js"></script>
 </body>
