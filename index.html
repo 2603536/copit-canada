@@ -11,21 +11,69 @@
 <header>
   <h1 class="logo">COPIT CANADA</h1>
   <nav>
-    <a href="index.html">Home</a>
-    <a href="shop.html">Shop</a>
+    <a href="#shop">Shop</a>
+    <a href="#reviews">Reviews</a>
+    <a href="#contact">Contact</a>
     <a href="cart.html">Cart (<span id="cart-count">0</span>)</a>
   </nav>
 </header>
 
 <section class="hero reveal">
-  <h2>Premium Streetwear</h2>
-  <p>Minimal. Bold. Canadian.</p>
-  <a href="shop.html" class="btn">Shop Now</a>
+  <h2>Premium r3ps</h2>
+  <p>Reliable, Fast shipping, Best quality</p>
+  <a href="#shop" class="btn">Explore Collection</a>
 </section>
 
-<section class="about reveal">
-  <h2>About Copit</h2>
-  <p>Copit Canada delivers high-contrast minimal fashion built for modern urban culture.</p>
+<section id="shop" class="products reveal">
+  <h2 class="section-title">Shop</h2>
+
+  <div class="product">
+    <h3>Belenciaga Hoodie</h3>
+    <p>$79</p>
+    <button onclick="addToCart('Belenciaga Hoodie',79)">Add to Cart</button>
+  </div>
+
+  <div class="product">
+    <h3>Chrome hearts tee Tee</h3>
+    <p>$49</p>
+    <button onclick="addToCart('Chrome hearts tee',49)">Add to Cart</button>
+  </div>
+
+  <div class="product">
+    <h3>Spi4der hoodie</h3>
+    <p>$60</p>
+    <button onclick="addToCart('Spi4der hoodie',39)">Add to Cart</button>
+  </div>
+</section>
+
+<section id="reviews" class="reviews reveal">
+  <h2 class="section-title">Customer Vouchers</h2>
+
+  <div class="review">
+    <p>"Best hoodie I've ever owned. Quality is insane."</p>
+    <span>- Alex M.</span>
+  </div>
+
+  <div class="review">
+    <p>"Price for quality was insane cant lie."</p>
+    <span>- Sarah T.</span>
+  </div>
+
+  <div class="review">
+    <p>"Shipping was fast and packaging was 1-1."</p>
+    <span>- Daniel R.</span>
+  </div>
+</section>
+
+<section id="contact" class="contact reveal">
+  <h2 class="section-title">Contact Us</h2>
+
+  <form>
+    <input type="text" placeholder="Your Name" required>
+    <input type="email" placeholder="Your Email" required>
+    <textarea placeholder="Your Message"></textarea>
+    <button type="submit">Send Message</button>
+  </form>
 </section>
 
 <footer>
