@@ -1,33 +1,26 @@
-let cart = JSON.parse(localStorage.getItem("cart")) || [];
-
-function updateCartCount() {
-  const count = cart.length;
-  const elements = document.querySelectorAll("#cart-count");
-  elements.forEach(el => el.textContent = count);
+// CART
+function openCart(){
+  document.getElementById("cartDrawer").classList.add("open");
+}
+function closeCart(){
+  document.getElementById("cartDrawer").classList.remove("open");
 }
 
-function addToCart(name, price) {
-  cart.push({ name, price });
-  localStorage.setItem("cart", JSON.stringify(cart));
-  updateCartCount();
-  alert(name + " added to cart");
-}
+// FADE IN ON SCROLL
+const faders = document.querySelectorAll(".fade-in");
 
-updateCartCount();
-
-/* Scroll Reveal */
-const reveals = document.querySelectorAll(".reveal");
-
-function revealOnScroll() {
-  reveals.forEach(el => {
-    const windowHeight = window.innerHeight;
-    const elementTop = el.getBoundingClientRect().top;
-
-    if (elementTop < windowHeight - 100) {
-      el.classList.add("active");
+window.addEventListener("scroll", () => {
+  faders.forEach(el => {
+    const rect = el.getBoundingClientRect();
+    if(rect.top < window.innerHeight - 100){
+      el.classList.add("show");
     }
   });
-}
+});
 
-window.addEventListener("scroll", revealOnScroll);
-revealOnScroll();
+// CURSOR GLOW
+const glow = document.querySelector(".cursor-glow");
+document.addEventListener("mousemove", e => {
+  glow.style.left = e.clientX + "px";
+  glow.style.top = e.clientY + "px";
+});
