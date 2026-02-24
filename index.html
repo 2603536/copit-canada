@@ -10,24 +10,23 @@
 
 <body>
 
-<!-- FREE SHIPPING BAR -->
+<!-- FREE SHIPPING -->
 <div class="announcement" id="announcement">
   FREE WORLDWIDE DELIVERY
   <span class="close-announcement" onclick="closeAnnouncement()">✕</span>
 </div>
 
-<!-- MAIN HEADER -->
 <header id="mainHeader">
 
-  <div class="logo">
-    <img src="logo.png" alt="Copit Logo">
-  </div>
-
-  <nav class="nav-left">
+  <div class="nav-left">
     <a href="#">Home</a>
     <a href="#categories">Catalog</a>
     <a href="#contact">Contact</a>
-  </nav>
+  </div>
+
+  <div class="logo">
+    <img src="logo.png">
+  </div>
 
   <div class="nav-right">
     <a href="#">Profile</a>
@@ -36,21 +35,21 @@
 
 </header>
 
-<!-- RED MOVING BANNER -->
-<div class="moving-banner">
+<!-- MOVING RED BAR -->
+<div class="moving-banner" id="movingBanner">
   <div class="banner-track">
     Limited Stock • Only The Best Quality • Limited Stock • Only The Best Quality •
   </div>
 </div>
 
-<!-- CATEGORIES SECTION -->
+<!-- CATEGORIES -->
 <section id="categories" class="categories">
-  <h2>Shop by Category</h2>
+  <h2 class="gradient-title">Shop by Category</h2>
 
   <div class="category-grid">
 
     <div class="category-box">
-      <img src="images/clothes.jpg" alt="Clothes">
+      <img src="images/clothes.jpg">
       <div class="category-content">
         <h3>Clothes</h3>
         <a href="#" class="btn">Shop Now</a>
@@ -58,7 +57,7 @@
     </div>
 
     <div class="category-box">
-      <img src="images/fragrances.jpg" alt="Fragrances">
+      <img src="images/fragrances.jpg">
       <div class="category-content">
         <h3>Fragrances</h3>
         <a href="#" class="btn">Shop Now</a>
@@ -66,7 +65,7 @@
     </div>
 
     <div class="category-box">
-      <img src="images/electronics.jpg" alt="Electronics">
+      <img src="images/electronics.jpg">
       <div class="category-content">
         <h3>Electronics</h3>
         <a href="#" class="btn">Shop Now</a>
@@ -76,14 +75,40 @@
   </div>
 </section>
 
-<!-- CART DRAWER -->
-<div class="cart-drawer" id="cartDrawer">
-  <div class="cart-header">
-    <h3>Your Cart</h3>
-    <button onclick="closeCart()">✕</button>
+<!-- BEST SELLERS -->
+<section class="best-sellers">
+  <h2>Best Sellers</h2>
+
+  <div class="seller-grid">
+    <div class="seller-box"><img src="images/product1.jpg"><p>Product Name 1</p></div>
+    <div class="seller-box"><img src="images/product2.jpg"><p>Product Name 2</p></div>
+    <div class="seller-box"><img src="images/product3.jpg"><p>Product Name 3</p></div>
+    <div class="seller-box"><img src="images/product4.jpg"><p>Product Name 4</p></div>
+    <div class="seller-box"><img src="images/product5.jpg"><p>Product Name 5</p></div>
   </div>
-  <div id="cart-items"></div>
-</div>
+</section>
+
+<!-- REVIEWS SCROLL RIGHT TO LEFT -->
+<section class="reviews-scroll">
+  <div class="review-track right-to-left">
+    <div class="review">Amazing quality 🔥</div>
+    <div class="review">Shipping was fast</div>
+    <div class="review">Will buy again</div>
+    <div class="review">5 stars</div>
+    <div class="review">Best online store</div>
+  </div>
+</section>
+
+<!-- REVIEWS SCROLL LEFT TO RIGHT -->
+<section class="reviews-scroll">
+  <div class="review-track left-to-right">
+    <div class="review">Premium feel</div>
+    <div class="review">Highly recommend</div>
+    <div class="review">Worth every dollar</div>
+    <div class="review">Great customer support</div>
+    <div class="review">Insane quality</div>
+  </div>
+</section>
 
 <script src="script.js"></script>
 </body>
