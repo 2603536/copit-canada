@@ -5,11 +5,16 @@
   <title>Copit Canada</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
 </head>
 <body>
 
+<div class="announcement">
+  Free Shipping Worldwide 🌎
+</div>
+
 <header>
-  <h1 class="logo">COPIT CANADA</h1>
+  <div class="logo">COPIT</div>
   <nav>
     <a href="#shop">Shop</a>
     <a href="#reviews">Reviews</a>
@@ -18,56 +23,64 @@
   </nav>
 </header>
 
-<section class="hero reveal">
-  <h2>Premium r3ps</h2>
-  <p>Reliable, Fast shipping, Best quality</p>
-  <a href="#shop" class="btn">Explore Collection</a>
-</section>
-
-<section id="shop" class="products reveal">
-  <h2 class="section-title">Shop</h2>
-
-  <div class="product">
-    <h3>Belenciaga Hoodie</h3>
-    <p>$79</p>
-    <button onclick="addToCart('Belenciaga Hoodie',79)">Add to Cart</button>
-  </div>
-
-  <div class="product">
-    <h3>Chrome hearts tee Tee</h3>
-    <p>$49</p>
-    <button onclick="addToCart('Chrome hearts tee',49)">Add to Cart</button>
-  </div>
-
-  <div class="product">
-    <h3>Spi4der hoodie</h3>
-    <p>$60</p>
-    <button onclick="addToCart('Spi4der hoodie',39)">Add to Cart</button>
+<section class="hero">
+  <div class="hero-content">
+    <h1>Premium Streetwear</h1>
+    <p>Luxury Quality. Fast Shipping. Trusted Worldwide.</p>
+    <a href="#shop" class="btn">Shop Now</a>
   </div>
 </section>
 
-<section id="reviews" class="reviews reveal">
-  <h2 class="section-title">Customer Vouchers</h2>
+<section id="shop" class="products">
+  <h2>Featured Collection</h2>
 
-  <div class="review">
-    <p>"Best hoodie I've ever owned. Quality is insane."</p>
-    <span>- Alex M.</span>
-  </div>
+  <div class="product-grid">
 
-  <div class="review">
-    <p>"Price for quality was insane cant lie."</p>
-    <span>- Sarah T.</span>
-  </div>
+    <div class="product">
+      <img src="https://via.placeholder.com/400x500" alt="">
+      <h3>Belenciaga Hoodie</h3>
+      <p>$79</p>
+      <button onclick="addToCart('Belenciaga Hoodie',79)">Add to Cart</button>
+    </div>
 
-  <div class="review">
-    <p>"Shipping was fast and packaging was 1-1."</p>
-    <span>- Daniel R.</span>
+    <div class="product">
+      <img src="https://via.placeholder.com/400x500" alt="">
+      <h3>Chrome Hearts Tee</h3>
+      <p>$49</p>
+      <button onclick="addToCart('Chrome Hearts Tee',49)">Add to Cart</button>
+    </div>
+
+    <div class="product">
+      <img src="https://via.placeholder.com/400x500" alt="">
+      <h3>Spi4der Hoodie</h3>
+      <p>$60</p>
+      <button onclick="addToCart('Spi4der Hoodie',60)">Add to Cart</button>
+    </div>
+
   </div>
 </section>
 
-<section id="contact" class="contact reveal">
-  <h2 class="section-title">Contact Us</h2>
+<section id="reviews" class="reviews">
+  <h2>What Customers Say</h2>
 
+  <div class="review-grid">
+    <div class="review">
+      <p>"Best hoodie I've ever owned. Quality is insane."</p>
+      <span>- Alex M.</span>
+    </div>
+    <div class="review">
+      <p>"Price for quality was insane cant lie."</p>
+      <span>- Sarah T.</span>
+    </div>
+    <div class="review">
+      <p>"Shipping was fast and packaging was 1-1."</p>
+      <span>- Daniel R.</span>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <h2>Contact Us</h2>
   <form>
     <input type="text" placeholder="Your Name" required>
     <input type="email" placeholder="Your Email" required>
