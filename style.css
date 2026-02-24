@@ -3,100 +3,131 @@ body {
   font-family: Arial, sans-serif;
   background: #000;
   color: #fff;
+  scroll-behavior: smooth;
 }
 
 header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px 10%;
-  background: #111;
+  text-align: center;
+  padding: 30px 20px;
+  background: #0a0a0a;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
 .logo {
-  font-size: 24px;
-  letter-spacing: 3px;
+  font-size: 32px;
+  letter-spacing: 6px;
+  background: linear-gradient(90deg, #7b2cff, #00bfff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+nav {
+  margin-top: 15px;
 }
 
 nav a {
-  color: #fff;
+  color: #aaa;
   text-decoration: none;
-  margin-left: 20px;
+  margin: 0 15px;
   transition: 0.3s;
 }
 
 nav a:hover {
-  color: #888;
+  color: #00bfff;
 }
 
 .hero {
   text-align: center;
-  padding: 120px 20px;
+  padding: 150px 20px;
+}
+
+.hero h2 {
+  font-size: 48px;
 }
 
 .btn {
   display: inline-block;
-  padding: 12px 30px;
-  margin-top: 20px;
-  background: #fff;
-  color: #000;
+  margin-top: 30px;
+  padding: 14px 35px;
+  background: linear-gradient(90deg, #7b2cff, #00bfff);
+  color: #fff;
   text-decoration: none;
-  font-weight: bold;
+  border-radius: 30px;
   transition: 0.3s;
 }
 
 .btn:hover {
-  background: #888;
-  color: #fff;
+  transform: scale(1.05);
+  box-shadow: 0 0 20px #7b2cff;
 }
 
-.products {
-  display: flex;
-  justify-content: center;
-  gap: 40px;
-  padding: 80px 20px;
-  flex-wrap: wrap;
+.section-title {
+  text-align: center;
+  margin-bottom: 60px;
+  font-size: 36px;
 }
 
-.product {
+.products, .reviews, .contact {
+  padding: 120px 20px;
+  text-align: center;
+}
+
+.product, .review {
   background: #111;
   padding: 30px;
-  width: 250px;
-  text-align: center;
+  margin: 20px auto;
+  max-width: 300px;
+  border-radius: 10px;
+  transition: 0.4s;
   border: 1px solid #222;
-  transition: 0.3s;
 }
 
-.product:hover {
+.product:hover, .review:hover {
   transform: translateY(-10px);
+  box-shadow: 0 0 20px #00bfff;
 }
 
 button {
-  padding: 10px 20px;
-  margin-top: 10px;
-  background: #fff;
+  padding: 10px 25px;
+  background: linear-gradient(90deg, #7b2cff, #00bfff);
   border: none;
+  color: white;
   cursor: pointer;
-  font-weight: bold;
+  border-radius: 20px;
+  margin-top: 15px;
 }
 
 button:hover {
-  background: #888;
-  color: #fff;
+  box-shadow: 0 0 15px #7b2cff;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  margin: auto;
+}
+
+input, textarea {
+  margin: 10px 0;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
 }
 
 footer {
-  text-align: center;
   padding: 40px;
-  background: #111;
-  margin-top: 80px;
+  text-align: center;
+  background: #0a0a0a;
 }
 
-/* Scroll Animation */
+/* Scroll animation */
 .reveal {
   opacity: 0;
-  transform: translateY(40px);
-  transition: all 0.8s ease;
+  transform: translateY(60px);
+  transition: 1s ease;
 }
 
 .reveal.active {
