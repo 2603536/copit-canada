@@ -4,103 +4,86 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Copit Canada</title>
-
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<div class="announcement">
-  FREE WORLDWIDE SHIPPING • PREMIUM QUALITY GUARANTEED
+<!-- FREE SHIPPING BAR -->
+<div class="announcement" id="announcement">
+  FREE WORLDWIDE DELIVERY
+  <span class="close-announcement" onclick="closeAnnouncement()">✕</span>
 </div>
 
-<div class="logo-wrapper">
-  <img src="logo.png" alt="Copit Logo">
-</div>
+<!-- MAIN HEADER -->
+<header id="mainHeader">
 
-<header>
-  <div class="nav-left">
-    <a href="#">Home</a>
-    <a href="#shop">Catalog</a>
-    <a href="#contact">Contact</a>
+  <div class="logo">
+    <img src="logo.png" alt="Copit Logo">
   </div>
+
+  <nav class="nav-left">
+    <a href="#">Home</a>
+    <a href="#categories">Catalog</a>
+    <a href="#contact">Contact</a>
+  </nav>
 
   <div class="nav-right">
     <a href="#">Profile</a>
-    <a href="#" onclick="openCart()">Cart (<span id="cart-count">0</span>)</a>
+    <a href="#" onclick="openCart()">Cart (0)</a>
   </div>
+
 </header>
 
-<section class="hero fade-in">
-  <div class="hero-content">
-    <h1>ENGINEERED STREETWEAR</h1>
-    <p>Performance. Precision. Presence.</p>
-    <a href="#shop" class="btn">Shop Now</a>
+<!-- RED MOVING BANNER -->
+<div class="moving-banner">
+  <div class="banner-track">
+    Limited Stock • Only The Best Quality • Limited Stock • Only The Best Quality •
   </div>
-</section>
+</div>
 
-<section id="shop" class="products fade-in">
-  <h2>Featured Collection</h2>
+<!-- CATEGORIES SECTION -->
+<section id="categories" class="categories">
+  <h2>Shop by Category</h2>
 
-  <div class="product-grid">
+  <div class="category-grid">
 
-    <div class="product tilt">
-      <div class="light-sweep"></div>
-      <img src="https://via.placeholder.com/400x500">
-      <h3>Belenciaga Hoodie</h3>
-      <p>$79</p>
-      <button onclick="addToCart('Belenciaga Hoodie',79)">Add to Cart</button>
+    <div class="category-box">
+      <img src="images/clothes.jpg" alt="Clothes">
+      <div class="category-content">
+        <h3>Clothes</h3>
+        <a href="#" class="btn">Shop Now</a>
+      </div>
     </div>
 
-    <div class="product tilt">
-      <div class="light-sweep"></div>
-      <img src="https://via.placeholder.com/400x500">
-      <h3>Chrome Hearts Tee</h3>
-      <p>$49</p>
-      <button onclick="addToCart('Chrome Hearts Tee',49)">Add to Cart</button>
+    <div class="category-box">
+      <img src="images/fragrances.jpg" alt="Fragrances">
+      <div class="category-content">
+        <h3>Fragrances</h3>
+        <a href="#" class="btn">Shop Now</a>
+      </div>
     </div>
 
-    <div class="product tilt">
-      <div class="light-sweep"></div>
-      <img src="https://via.placeholder.com/400x500">
-      <h3>Spi4der Hoodie</h3>
-      <p>$60</p>
-      <button onclick="addToCart('Spi4der Hoodie',60)">Add to Cart</button>
+    <div class="category-box">
+      <img src="images/electronics.jpg" alt="Electronics">
+      <div class="category-content">
+        <h3>Electronics</h3>
+        <a href="#" class="btn">Shop Now</a>
+      </div>
     </div>
 
   </div>
-</section>
-
-<section class="reviews fade-in">
-  <h2>Customer Reviews</h2>
-  <div class="review-grid">
-    <div class="review">"Best hoodie I've ever owned."</div>
-    <div class="review">"Shipping was insanely fast."</div>
-    <div class="review">"Quality is unmatched."</div>
-  </div>
-</section>
-
-<section id="contact" class="contact fade-in">
-  <h2>Contact Us</h2>
-  <form>
-    <input type="text" placeholder="Name">
-    <input type="email" placeholder="Email">
-    <textarea placeholder="Message"></textarea>
-    <button type="submit">Send</button>
-  </form>
 </section>
 
 <!-- CART DRAWER -->
 <div class="cart-drawer" id="cartDrawer">
   <div class="cart-header">
     <h3>Your Cart</h3>
-    <button onclick="closeCart()">X</button>
+    <button onclick="closeCart()">✕</button>
   </div>
   <div id="cart-items"></div>
 </div>
-
-<div class="cursor-glow"></div>
 
 <script src="script.js"></script>
 </body>
