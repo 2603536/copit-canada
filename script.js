@@ -1,4 +1,3 @@
-// CART SYSTEM
 let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
 function updateCartCount() {
@@ -14,42 +13,17 @@ function addToCart(name, price) {
   alert(name + " added to cart");
 }
 
-function displayCart() {
-  const cartItems = document.getElementById("cart-items");
-  const totalEl = document.getElementById("total");
-  if (!cartItems) return;
-
-  cartItems.innerHTML = "";
-  let total = 0;
-
-  cart.forEach(item => {
-    total += item.price;
-    cartItems.innerHTML += `<p>${item.name} - $${item.price}</p>`;
-  });
-
-  totalEl.textContent = "Total: $" + total;
-}
-
-function clearCart() {
-  cart = [];
-  localStorage.removeItem("cart");
-  displayCart();
-  updateCartCount();
-}
-
 updateCartCount();
-displayCart();
 
-// SCROLL ANIMATION
+/* Scroll Reveal */
 const reveals = document.querySelectorAll(".reveal");
 
 function revealOnScroll() {
   reveals.forEach(el => {
     const windowHeight = window.innerHeight;
     const elementTop = el.getBoundingClientRect().top;
-    const visible = 100;
 
-    if (elementTop < windowHeight - visible) {
+    if (elementTop < windowHeight - 100) {
       el.classList.add("active");
     }
   });
