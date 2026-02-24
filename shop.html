@@ -1,1 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Shop - Copit Canada</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
+<header>
+  <h1 class="logo">COPIT CANADA</h1>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="shop.html">Shop</a>
+    <a href="cart.html">Cart (<span id="cart-count">0</span>)</a>
+  </nav>
+</header>
+
+<section class="products">
+
+  <div class="product reveal">
+    <h3>Black Hoodie</h3>
+    <p>$79</p>
+    <button onclick="addToCart('Black Hoodie',79)">Add to Cart</button>
+  </div>
+
+  <div class="product reveal">
+    <h3>Minimal Tee</h3>
+    <p>$49</p>
+    <button onclick="addToCart('Minimal Tee',49)">Add to Cart</button>
+  </div>
+
+  <div class="product reveal">
+    <h3>Street Cap</h3>
+    <p>$39</p>
+    <button onclick="addToCart('Street Cap',39)">Add to Cart</button>
+  </div>
+
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
