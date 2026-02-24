@@ -2,25 +2,22 @@
 function openCart(){
   document.getElementById("cartDrawer").classList.add("open");
 }
+
 function closeCart(){
   document.getElementById("cartDrawer").classList.remove("open");
 }
 
-// FADE IN ON SCROLL
-const faders = document.querySelectorAll(".fade-in");
+// CLOSE ANNOUNCEMENT
+function closeAnnouncement(){
+  document.getElementById("announcement").style.display = "none";
+}
 
-window.addEventListener("scroll", () => {
-  faders.forEach(el => {
-    const rect = el.getBoundingClientRect();
-    if(rect.top < window.innerHeight - 100){
-      el.classList.add("show");
-    }
-  });
-});
-
-// CURSOR GLOW
-const glow = document.querySelector(".cursor-glow");
-document.addEventListener("mousemove", e => {
-  glow.style.left = e.clientX + "px";
-  glow.style.top = e.clientY + "px";
+// HIDE ANNOUNCEMENT ON SCROLL
+window.addEventListener("scroll", function(){
+  const announcement = document.getElementById("announcement");
+  if(window.scrollY > 50){
+    announcement.style.transform = "translateY(-100%)";
+  } else {
+    announcement.style.transform = "translateY(0)";
+  }
 });
