@@ -5,6 +5,78 @@
   <title>Copit Canada</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
+  <style>
+    :root {
+      --bg-main: #0f1115;
+      --bg-soft: #171a21;
+      --card-bg: #1f2430;
+      --text-main: #f3f0e8;
+      --text-muted: #b6b0a0;
+      --accent: #d4a86a;
+      --accent-2: #8f6a3f;
+      --line: #2d3444;
+    }
+
+    body {
+      background: radial-gradient(circle at 20% 10%, #232a38 0%, var(--bg-main) 40%), var(--bg-main);
+      color: var(--text-main);
+    }
+
+    header,
+    footer {
+      background: rgba(15, 17, 21, 0.9);
+      backdrop-filter: blur(4px);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .logo,
+    .btn,
+    button {
+      background: linear-gradient(90deg, var(--accent), #f1d1a2);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .btn,
+    button {
+      -webkit-text-fill-color: var(--bg-main);
+      color: var(--bg-main);
+      background-clip: border-box;
+      border: 1px solid transparent;
+      box-shadow: 0 6px 20px rgba(143, 106, 63, 0.35);
+    }
+
+    nav a {
+      color: var(--text-muted);
+    }
+
+    nav a:hover {
+      color: var(--accent);
+    }
+
+    .product,
+    .review {
+      background: linear-gradient(180deg, #222836, var(--card-bg));
+      border: 1px solid var(--line);
+    }
+
+    .product:hover,
+    .review:hover {
+      box-shadow: 0 0 0 1px rgba(212, 168, 106, 0.35), 0 16px 30px rgba(0, 0, 0, 0.35);
+    }
+
+    input,
+    textarea {
+      background: #141923;
+      color: var(--text-main);
+      border: 1px solid var(--line);
+    }
+
+    input::placeholder,
+    textarea::placeholder {
+      color: #8f97aa;
+    }
+  </style>
 </head>
 <body>
 
@@ -30,56 +102,3 @@
   <div class="product">
     <h3>Belenciaga Hoodie</h3>
     <p>$79</p>
-    <button onclick="addToCart('Belenciaga Hoodie',79)">Add to Cart</button>
-  </div>
-
-  <div class="product">
-    <h3>Chrome hearts tee Tee</h3>
-    <p>$49</p>
-    <button onclick="addToCart('Chrome hearts tee',49)">Add to Cart</button>
-  </div>
-
-  <div class="product">
-    <h3>Spi4der hoodie</h3>
-    <p>$60</p>
-    <button onclick="addToCart('Spi4der hoodie',39)">Add to Cart</button>
-  </div>
-</section>
-
-<section id="reviews" class="reviews reveal">
-  <h2 class="section-title">Customer Vouchers</h2>
-
-  <div class="review">
-    <p>"Best hoodie I've ever owned. Quality is insane."</p>
-    <span>- Alex M.</span>
-  </div>
-
-  <div class="review">
-    <p>"Price for quality was insane cant lie."</p>
-    <span>- Sarah T.</span>
-  </div>
-
-  <div class="review">
-    <p>"Shipping was fast and packaging was 1-1."</p>
-    <span>- Daniel R.</span>
-  </div>
-</section>
-
-<section id="contact" class="contact reveal">
-  <h2 class="section-title">Contact Us</h2>
-
-  <form>
-    <input type="text" placeholder="Your Name" required>
-    <input type="email" placeholder="Your Email" required>
-    <textarea placeholder="Your Message"></textarea>
-    <button type="submit">Send Message</button>
-  </form>
-</section>
-
-<footer>
-  <p>© 2026 Copit Canada</p>
-</footer>
-
-<script src="script.js"></script>
-</body>
-</html>
